@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CV y portafolio de Damian Lopez Bautista, estudiante de Licenciatura en Informática.">
+    <title>Damian Lopez Bautista — Portafolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<header class="hero">
+    <div class="container">
+        <div class="hero-inner text-center">
+
+            <img src="foto.jpg" alt="Foto de Damian Lopez Bautista" class="hero-avatar">
+
+            <h1 class="hero-name">Damian Lopez Bautista</h1>
+            <p class="hero-role">
+                <i class="bi bi-mortarboard-fill me-2"></i>Estudiante de Licenciatura en Informática
+            </p>
+            <p class="hero-tagline">Desarrollo web · Redes · Análisis de datos</p>
+
+            <!-- Botones de contacto directo -->
+            <div class="hero-buttons d-flex flex-wrap justify-content-center gap-2 mt-4">
+
+                <a href="https://wa.me/525573340394?text=Hola%20Damian,%20vi%20tu%20CV%20y%20me%20gustar%C3%ADa%20contactarte"
+                   target="_blank" rel="noopener"
+                   class="btn hero-btn hero-btn-whatsapp">
+                    <i class="bi bi-whatsapp"></i> WhatsApp
+                </a>
+
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=damian00lopez@gmail.com&su=Contacto%20desde%20tu%20CV"
+                   target="_blank" rel="noopener"
+                   class="btn hero-btn hero-btn-gmail">
+                    <i class="bi bi-envelope-fill"></i> Gmail
+                </a>
+
+                <a href="tel:+525573340394" class="btn hero-btn hero-btn-phone">
+                    <i class="bi bi-telephone-fill"></i> Llamar
+                </a>
+
+                <a href="https://www.linkedin.com/in/damian-l%C3%B3pez-bautista-43674a252"
+                   target="_blank" rel="noopener"
+                   class="btn hero-btn hero-btn-linkedin">
+                    <i class="bi bi-linkedin"></i> LinkedIn
+                </a>
+
+                <a href="https://github.com/damian00lopez-droid"
+                   target="_blank" rel="noopener"
+                   class="btn hero-btn hero-btn-github">
+                    <i class="bi bi-github"></i> GitHub
+                </a>
+
+            </div>
+
+            <p class="hero-location mt-3 mb-0">
+                <i class="bi bi-geo-alt-fill me-1"></i> Ciudad Naucalpan de Juárez, México
+            </p>
+
+        </div>
+    </div>
+    <div class="hero-wave"></div>
+</header>
+
+<!-- ============================================
+     STRIP DE CONTACTO VISIBLE
+     ============================================ -->
+<div class="contact-strip">
+    <div class="container">
+        <div class="row g-3 text-center">
+            <div class="col-md-6">
+                <a href="mailto:damian00lopez@gmail.com" class="contact-strip-item">
+                    <i class="bi bi-envelope-fill"></i>
+                    <span>damian00lopez@gmail.com</span>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a href="tel:+525573340394" class="contact-strip-item">
+                    <i class="bi bi-telephone-fill"></i>
+                    <span>+52 55 7334 0394</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================
+     CONTENIDO PRINCIPAL
+     ============================================ -->
+<main class="container main-content">
+
+    <!-- Barra de acciones -->
+    <div class="actions-bar d-print-none">
+        <span class="actions-text">
+            <i class="bi bi-file-earmark-pdf me-1"></i> ¿Necesitas una copia?
+        </span>
+        <button onclick="window.print()" class="btn btn-pdf">
+            <i class="bi bi-download me-1"></i> Descargar PDF
+        </button>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- ============ COLUMNA IZQUIERDA ============ -->
+        <aside class="col-lg-4">
+
+            <section class="cv-card">
+                <h2 class="cv-section-title">
+                    <i class="bi bi-code-slash"></i> Habilidades
+                </h2>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="skill-badge">C</span>
+                    <span class="skill-badge">C#</span>
+                    <span class="skill-badge">Java</span>
+                    <span class="skill-badge">PHP</span>
+                    <span class="skill-badge">SQL</span>
+                    <span class="skill-badge">HTML</span>
+                    <span class="skill-badge">CSS</span>
+                    <span class="skill-badge">Bootstrap</span>
+                </div>
+            </section>
+
+            <section class="cv-card">
+                <h2 class="cv-section-title">
+                    <i class="bi bi-patch-check-fill"></i> Cursos y Constancias
+                </h2>
+                <ul class="course-list">
+                    <li>
+                        <strong>Samsung Innovation Campus</strong>
+                        <span class="course-tag">En curso</span>
+                    </li>
+                    <li>
+                        <strong>Inglés B1</strong>
+                        <span class="course-tag">Certificación</span>
+                    </li>
+                    <li>
+                        <strong>Tablas Dinámicas en Estadística</strong>
+                        <span class="course-tag">CISEMAT</span>
+                    </li>
+                    <li>
+                        <strong>Curso de Lectura en Inglés I y II</strong>
+                    </li>
+                    <li>
+                        <strong>Iniciación al Cómputo I y II</strong>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="cv-card">
+                <h2 class="cv-section-title">
+                    <i class="bi bi-translate"></i> Idiomas
+                </h2>
+                <ul class="cv-list">
+                    <li><i class="bi bi-check-circle-fill me-2"></i>Español — Nativo</li>
+                    <li><i class="bi bi-check-circle-fill me-2"></i>Inglés — B1 (Intermedio)</li>
+                </ul>
+            </section>
+
+            <section class="cv-card">
+                <h2 class="cv-section-title">
+                    <i class="bi bi-link-45deg"></i> Enlaces
+                </h2>
+                <ul class="cv-list">
+                    <li>
+                        <i class="bi bi-github me-2"></i>
+                        <a href="https://github.com/damian00lopez-droid" target="_blank" rel="noopener">github.com/damian00lopez-droid</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-linkedin me-2"></i>
+                        <a href="https://www.linkedin.com/in/damian-l%C3%B3pez-bautista-43674a252" target="_blank" rel="noopener">linkedin.com/in/damian-lópez-bautista</a>
+                    </li>
+                </ul>
+            </section>
+
+        </aside>
+
+        <!-- ============ COLUMNA DERECHA ============ -->
+        <div class="col-lg-8">
+
+            <section class="cv-card">
+                <h2 class="cv-section-title">
+                    <i class="bi bi-person-fill"></i> Perfil
+                </h2>
+                <p class="mb-0">
+                    Estudiante de Licenciatura en Informática con interés en desarrollo de software,
+                    <strong>redes</strong> y <strong>análisis de datos</strong>. Experiencia académica construyendo
+                    aplicaciones web, sistemas contables y chatbots con PHP, MySQL y Java. Conocimientos en
+                    configuración de redes, gestión de bases de datos y análisis de información. Busco mi
+                    primera oportunidad profesional donde pueda aplicar y seguir desarrollando mis habilidades técnicas.
+                </p>
+            </section>
+
+            <section class="cv-card">
+                <h2 class="cv-section-title">
+                    <i class="bi bi-briefcase-fill"></i> Proyectos Académicos
+                </h2>
+
+                <article class="project-item">
+                    <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                        <h3 class="project-title">
+                            <i class="bi bi-car-front-fill"></i> AutoRent — Sitio Web de Renta de Autos
+                        </h3>
+                        <span class="project-tag">Proyecto escolar</span>
+                    </div>
+                    <p class="mb-0">
+                        Sitio web completo con catálogo de vehículos, sistema de reservas y panel de
+                        administración. Desarrollado con PHP, MySQL y CSS.
+                    </p>
+                </article>
+
+                <article class="project-item">
+                    <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                        <h3 class="project-title">
+                            <i class="bi bi-calculator-fill"></i> Sistema Contable de Costos
+                        </h3>
+                        <span class="project-tag">Proyecto escolar</span>
+                    </div>
+                    <p class="mb-0">
+                        Aplicación de escritorio para registro y cálculo de costos de producción, con generación
+                        de reportes. Desarrollado en Java con conexión a base de datos SQL.
+                    </p>
+                </article>
+
+                <article class="project-item">
+                    <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                        <h3 class="project-title">
+                            <i class="bi bi-robot"></i> Chatbot de Renta de Autos
+                        </h3>
+                        <span class="project-tag">Proyecto escolar</span>
+                    </div>
+                    <p class="mb-0">
+                        Chatbot conversacional para consultas de disponibilidad y precios de vehículos.
+                        Implementado con Dialogflow, conexión a base de datos e implementación de IA.
+                    </p>
+                </article>
+
+                <article class="project-item">
+                    <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                        <h3 class="project-title">
+                            <i class="bi bi-chat-dots-fill"></i> Chatbot de Ventas
+                        </h3>
+                        <span class="project-tag">Proyecto escolar</span>
+                    </div>
+                    <p class="mb-0">
+                        Asistente automatizado para atención al cliente y proceso de ventas, con respuestas
+                        preestablecidas.
+                    </p>
+                </article>
+            </section>
+
+            <section class="cv-card">
+                <h2 class="cv-section-title">
+                    <i class="bi bi-mortarboard-fill"></i> Educación
+                </h2>
+                <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                    <h3 class="project-title mb-0">Licenciatura en Informática</h3>
+                    <span class="project-tag">En curso</span>
+                </div>
+                <p class="mb-0 mt-2">
+                    <i class="bi bi-building me-1"></i>
+                    Facultad de Estudios Superiores Cuautitlán, UNAM
+                </p>
+            </section>
+
+        </div>
+    </div>
+</main>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="site-footer text-center">
+    <div class="container">
+        <p class="mb-0">
+            © 2026 Damian Lopez Bautista · Hecho con <i class="bi bi-heart-fill text-danger"></i> y Bootstrap 5
+        </p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

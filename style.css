@@ -1,0 +1,462 @@
+/* ============================================
+   CV / Portafolio — Damian Lopez Bautista
+   ============================================ */
+
+:root {
+    --gradiente-1: #4f46e5;
+    --gradiente-2: #7c3aed;
+    --gradiente-3: #db2777;
+    --acento: #6366f1;
+    --acento-suave: #eef2ff;
+    --texto: #1e293b;
+    --texto-suave: #64748b;
+    --borde: #e2e8f0;
+    --fondo: #f1f5f9;
+    --tarjeta: #ffffff;
+    --whatsapp: #25D366;
+    --gmail: #EA4335;
+    --linkedin: #0A66C2;
+    --github: #181717;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: var(--texto);
+    background-color: var(--fondo);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: var(--acento);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover { color: var(--gradiente-3); }
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+    position: relative;
+    background: linear-gradient(135deg, var(--gradiente-1) 0%, var(--gradiente-2) 50%, var(--gradiente-3) 100%);
+    color: #ffffff;
+    padding: 4rem 0 5rem;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.15) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.1) 0%, transparent 35%);
+    pointer-events: none;
+}
+
+.hero-inner { position: relative; z-index: 2; }
+
+.hero-avatar {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.95);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+    margin-bottom: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+.hero-avatar:hover { transform: scale(1.05) rotate(-2deg); }
+
+.hero-name {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.4rem;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+.hero-role {
+    font-size: 1.05rem;
+    font-weight: 500;
+    opacity: 0.95;
+    margin-bottom: 0.3rem;
+}
+
+.hero-tagline {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    letter-spacing: 0.03em;
+}
+
+.hero-location {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+/* ---- Botones del hero ---- */
+.hero-buttons {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--texto);
+    border: none;
+    border-radius: 50rem;
+    padding: 0.55rem 1.25rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.hero-btn i {
+    font-size: 1rem;
+    transition: color 0.25s ease;
+}
+
+.hero-btn:hover {
+    background: #ffffff;
+    color: var(--texto);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+}
+
+/* Colores de marca en hover */
+.hero-btn-whatsapp:hover i { color: var(--whatsapp); }
+.hero-btn-gmail:hover i { color: var(--gmail); }
+.hero-btn-phone:hover i { color: var(--acento); }
+.hero-btn-linkedin:hover i { color: var(--linkedin); }
+.hero-btn-github:hover i { color: var(--github); }
+
+.hero-wave {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: var(--fondo);
+    clip-path: ellipse(70% 100% at 50% 100%);
+}
+
+/* ============================================
+   STRIP DE CONTACTO
+   ============================================ */
+.contact-strip {
+    background: #ffffff;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid var(--borde);
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.contact-strip-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--texto);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.4rem 1rem;
+    border-radius: 50rem;
+    transition: all 0.2s ease;
+    word-break: break-all;
+}
+
+.contact-strip-item i {
+    color: var(--acento);
+    font-size: 1.1rem;
+}
+
+.contact-strip-item:hover {
+    background: var(--acento-suave);
+    color: var(--acento);
+}
+
+/* ============================================
+   BARRA DE ACCIONES (PDF)
+   ============================================ */
+.main-content {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.actions-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    background: #ffffff;
+    border: 1px dashed var(--borde);
+    border-radius: 1rem;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.actions-text {
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.btn-pdf {
+    background: linear-gradient(135deg, var(--gradiente-1), var(--gradiente-2));
+    color: #ffffff;
+    border: none;
+    border-radius: 50rem;
+    padding: 0.5rem 1.3rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    box-shadow: 0 6px 15px rgba(99, 102, 241, 0.35);
+    transition: all 0.25s ease;
+}
+
+.btn-pdf:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(99, 102, 241, 0.45);
+}
+
+/* ============================================
+   TARJETAS
+   ============================================ */
+.cv-card {
+    background: var(--tarjeta);
+    border-radius: 1rem;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
+    border: 1px solid var(--borde);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cv-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.1);
+}
+
+.cv-section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--texto);
+    padding-bottom: 0.7rem;
+    margin-bottom: 1.1rem;
+    border-bottom: 2px solid var(--borde);
+    position: relative;
+}
+
+.cv-section-title i {
+    color: var(--acento);
+    font-size: 1.15rem;
+}
+
+.cv-section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 55px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gradiente-1), var(--gradiente-3));
+    border-radius: 2px;
+}
+
+/* ---- Listas ---- */
+.cv-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cv-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed var(--borde);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cv-list li:last-child { border-bottom: none; }
+
+.cv-list i { color: var(--acento); }
+
+.cv-list a {
+    color: var(--texto);
+    font-size: 0.88rem;
+    word-break: break-word;
+}
+
+.cv-list a:hover { color: var(--acento); }
+
+/* ---- Badges de habilidades ---- */
+.skill-badge {
+    display: inline-block;
+    background: var(--acento-suave);
+    color: var(--acento);
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 50rem;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+.skill-badge:hover {
+    background: linear-gradient(135deg, var(--gradiente-1), var(--gradiente-2));
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(99, 102, 241, 0.3);
+}
+
+/* ---- Proyectos ---- */
+.project-item {
+    padding: 1rem 0;
+    border-bottom: 1px dashed var(--borde);
+}
+
+.project-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.project-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--texto);
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.project-title i { color: var(--acento); }
+
+.project-item p {
+    color: var(--texto-suave);
+    font-size: 0.93rem;
+}
+
+.project-tag {
+    background: linear-gradient(135deg, var(--gradiente-1), var(--gradiente-2));
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50rem;
+    white-space: nowrap;
+}
+
+/* ---- Cursos ---- */
+.course-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.course-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 0;
+    border-bottom: 1px dashed var(--borde);
+    font-size: 0.93rem;
+    flex-wrap: wrap;
+}
+
+.course-list li:last-child { border-bottom: none; }
+
+.course-list li::before {
+    content: "\F26A";
+    font-family: "bootstrap-icons";
+    color: var(--acento);
+    margin-right: 0.6rem;
+}
+
+.course-list li strong {
+    flex: 1;
+    font-weight: 600;
+}
+
+.course-tag {
+    background: var(--acento-suave);
+    color: var(--acento);
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.15rem 0.6rem;
+    border-radius: 50rem;
+    white-space: nowrap;
+}
+
+/* ---- Footer ---- */
+.site-footer {
+    background: #0f172a;
+    color: #cbd5e1;
+    padding: 1.5rem 0;
+    font-size: 0.88rem;
+    margin-top: 2rem;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .hero { padding: 3rem 0 4rem; }
+    .cv-card { padding: 1.25rem; }
+    .contact-strip-item { font-size: 0.85rem; }
+    .actions-bar { flex-direction: column; text-align: center; }
+}
+
+/* ============================================
+   IMPRESIÓN / PDF
+   ============================================ */
+@media print {
+    body { background: #ffffff; }
+
+    .hero {
+        background: #4f46e5 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        padding: 2rem 0;
+    }
+
+    .hero-btn,
+    .actions-bar,
+    .site-footer,
+    .contact-strip {
+        display: none !important;
+    }
+
+    .cv-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        page-break-inside: avoid;
+        transform: none !important;
+    }
+
+    .skill-badge,
+    .project-tag {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
